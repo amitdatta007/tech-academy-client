@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.light-theme {
+    --primary: #570DF8;
+    --secondary: #F000B8;
+    --accent: #37CDBE;
+    --neutral: #3D4451;
+    --base-100: #FFFFFF;
+    --base-300: #E5E6E6;
+    --base-content: #1F2937;
+    --info: #3ABFF8;
+    --success: #36D399;
+    --warning: #FBBD23;
+    --error: #F87272;
+}
+
+.dark-theme {
+    --primary: #6419E6;
+    --secondary: #D926A9;
+    --accent: #1FB2A6;
+    --neutral: #191D24;
+    --base-100: #1F242D;
+    --base-300: #2A303C;
+    --base-content: #A6ADBA;
+    --info: #3ABFF8;
+    --success: #36D399;
+    --warning: #FBBD23;
+    --error: #F87272;
+}
+
+body {
+    background-color: var(--base-100);
+}
