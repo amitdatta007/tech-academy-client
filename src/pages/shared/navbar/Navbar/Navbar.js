@@ -5,12 +5,14 @@ import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { HiSun, HiMoon, HiUser } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../context/UserContext';
+import {useScrollLock} from '../../../../hook/useScrollLock';
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [open, setOpen] = useState(false);
-
     const { user, logOut } = useContext(AuthContext);
+    const {lockScroll, unlockScroll} = useScrollLock();
+    open ? lockScroll() : unlockScroll();
 
     useEffect(() => {
         if (isDarkMode) {
@@ -23,6 +25,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logOut();
+        setOpen(false);
     };
 
     return (
@@ -62,7 +65,7 @@ const Navbar = () => {
                                 </div>
                                 :
                                 <div>
-                                    <Link to='/login' className='login-btn' >Log In</Link>
+                                    <Link to='/login' onClick={() => setOpen(false)} className='login-btn' >Log In</Link>
                                 </div>
                         }
 

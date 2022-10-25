@@ -1,0 +1,26 @@
+.home-page{
+    display: flex;
+    justify-content: center;
+
+}
+.home{
+    width: 95%;
+    max-width: 1280px;
+}
+.banner-title{
+    color: var(--primary);
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.banner-description{
+    color: var(--base-content);
+}
+.explore-courses-btn{
+    background-color: var(--primary);
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: var(--base-100);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
