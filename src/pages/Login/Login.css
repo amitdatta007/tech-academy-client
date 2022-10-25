@@ -85,7 +85,7 @@
     color: var(--primary);
 }
 .toggle-btn:hover{
-    color: var(--base-content);
+    border-bottom: 1px solid var(--primary);
 }
 .horizontal-line{
     width: 100%;
@@ -101,4 +101,7 @@
 .third-party-login > button{
     font-size: 1.6rem;
     color: var(--base-content);
+}
+.third-party-login > button:hover{
+    color: var(--primary);
 }

@@ -1,29 +1,29 @@
 import React from 'react';
-import './Login.css';
 import {Link} from 'react-router-dom';
 import {FaGithub, FaGoogle, FaFacebook} from 'react-icons/fa';
 
-const Login = () => {
+const Register = () => {
 
-    const handleLogin = e => {
+    const handleRegister = e => {
         e.preventDefault();
     }
 
     return (
         <div className='login-page'>
             <div className="login-container p-6 md:p-10">
-                <h2 className='form-title'>Hi, Welcome Back!</h2>
-                <form onSubmit={handleLogin} className='form'>
+                <h2 className='form-title'>Welcome, Register Now!</h2>
+                <form onSubmit={handleRegister} className='form'>
                     <div className='input-field-area'>
+                        <input type="text" name="displayName" placeholder='Full Name' required/>
+                        <input type="url" name="photoUrl" placeholder='Photo Url' required/>
                         <input type="email" name="email" placeholder='Email Address' required/>
                         <input type="password" name="password" placeholder='Password'  required/>
-                        <div className='forgot-pass-area'>
-                            <Link className='forgot-pass'>Forgot Password?</Link>
-                        </div>
+                        <input type="password" name="confirmPassword" placeholder='Confirm Password'  required/>
+                        
                     </div>
                     <div className='input-submit-area'>
                         <input type="submit" value="Log in" className='submit-btn' />
-                        <p className='toggle-page'>Don't have an account? <Link className='toggle-btn' to='/register'>Registration Now</Link></p>
+                        <p className='toggle-page'>Already have an account? <Link className='toggle-btn' to='/login'>Login Now</Link></p>
                     </div>
                 </form>
                 <div className='horizontal-line'></div>
@@ -43,4 +43,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
