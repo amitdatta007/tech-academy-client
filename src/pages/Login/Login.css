@@ -105,3 +105,12 @@
 .third-party-login > button:hover{
     color: var(--primary);
 }
+.error-msg{
+    background-color: var(--error);
+    color: var(--base-100);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 6px;
+}
