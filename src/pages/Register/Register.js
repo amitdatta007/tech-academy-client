@@ -6,7 +6,7 @@ import { AuthContext } from '../../context/UserContext';
 const Register = () => {
     const [error, setError] = useState(null);
 
-    const {createUser, updateUser, setProfileUpdated, profileUpdated} = useContext(AuthContext)
+    const {createUser, updateUser, setProfileUpdated, profileUpdated, handleGoogleLogin, handleFacebookLogin, handleGithubLogin} = useContext(AuthContext)
 
     const handleRegister = e => {
         e.preventDefault();
@@ -66,13 +66,13 @@ const Register = () => {
                 </form>
                 <div className='horizontal-line'></div>
                 <div className='third-party-login'>
-                    <button>
+                    <button onClick={handleGoogleLogin}>
                         <FaGoogle />
                     </button>
-                    <button>
+                    <button onClick={handleFacebookLogin}>
                         <FaFacebook />
                     </button>
-                    <button>
+                    <button onClick={handleGithubLogin}>
                         <FaGithub />
                     </button>
                 </div>

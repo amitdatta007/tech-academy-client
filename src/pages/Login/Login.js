@@ -6,7 +6,7 @@ import { AuthContext } from '../../context/UserContext';
 
 const Login = () => {
     const [error, setError] = useState(null);
-    const {signIn} = useContext(AuthContext);
+    const {signIn, handleGoogleLogin, handleFacebookLogin, handleGithubLogin} = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -59,13 +59,13 @@ const Login = () => {
                 </form>
                 <div className='horizontal-line'></div>
                 <div className='third-party-login'>
-                    <button>
+                    <button onClick={handleGoogleLogin}>
                         <FaGoogle />
                     </button>
-                    <button>
+                    <button onClick={handleFacebookLogin}>
                         <FaFacebook />
                     </button>
-                    <button>
+                    <button onClick={handleGithubLogin}>
                         <FaGithub />
                     </button>
                 </div>
