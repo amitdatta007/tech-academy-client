@@ -1,0 +1,55 @@
+.navbar{
+    /* background-color: var(--secondary); */
+    width: 95%;
+    max-width: 1280px;
+}
+.logo-text{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.logo-text-left{
+    color: var(--primary);
+}
+.logo-text-right{
+    color: var(--base-content);
+}
+.nav-items {
+   background-color: var(--base-100);
+}
+.nav-item{
+    color: var(--base-content);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.nav-item:hover{
+    color: var(--primary);
+}
+.active{
+    color: var(--primary);
+}
+.theme-icon{
+    font-size: 1.4rem;
+    color: var(--base-content);  
+}
+.menu-icon{
+    color: var(--base-content);
+}
+.vartical-line{
+    width: 1px;
+    height: 20px;
+    background-color: var(--base-content);
+}
+.login-btn{
+    background-color: var(--base-content);
+    padding: 6px 16px;
+    color: var(--base-300);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.login-btn:hover{
+    background-color: transparent;
+    color: var(--base-content);
+    box-shadow: inset 0 0 0 1.5px var(--base-content);
+}
+
