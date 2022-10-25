@@ -1,0 +1,104 @@
+.login-page{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+.form-title{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--base-content);
+}
+.login-container{
+    margin: 80px 0;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--base-300);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.input-field-area{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    gap: 16px;
+}
+.input-field-area > input{
+    background: transparent;
+    padding: 12px;
+    border: 1.5px solid var(--base-300);
+    border-radius: 6px;
+    color: var(--base-content);
+}
+.input-field-area > input:focus{
+    outline: none;
+    border: 1.5px solid var(--primary);
+    
+}
+.submit-btn[type='submit']{
+    width: 100%;
+    background-color: var(--primary);
+    padding: 12px 0;
+    color: var(--base-300);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+.submit-btn[type='submit']:hover{
+    background-color: transparent;
+    color: var(--primary);
+    box-shadow: inset 0 0 0 1px var(--primary) ;
+}
+.input-submit-area{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.forgot-pass-area{
+    display: flex;
+    justify-content: flex-end;
+}
+.forgot-pass{
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--base-content);
+}
+.forgot-pass:hover{
+    color: var(--primary);
+}
+.toggle-page{
+    text-align: center;
+    font-weight: 500;
+    color: var(--base-content);
+}
+.toggle-btn{
+    color: var(--primary);
+}
+.toggle-btn:hover{
+    color: var(--base-content);
+}
+.horizontal-line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--base-content);
+    opacity: 0.2;
+}
+.third-party-login{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.third-party-login > button{
+    font-size: 1.6rem;
+    color: var(--base-content);
+}
