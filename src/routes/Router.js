@@ -1,5 +1,7 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Main from '../layout/Main';
+import Courses from '../pages/Courses/Courses/Courses';
+import ShowCourses from '../pages/Courses/ShowCourses/ShowCourses';
 import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
@@ -12,10 +14,6 @@ const Router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
-            },
-            {
-                path: '/courses',
-                element: 'this is courses'
             },
             {
                 path: '/faq',
@@ -33,6 +31,17 @@ const Router = createBrowserRouter([
                 path: '/register',
                 element: <Register />
             },
+            {
+                path: '/catagory/:catagoryId',
+                element: <Courses />,
+                children: [
+                    {
+                        path: '/catagory/:catagoryId',
+                        element: <ShowCourses />,
+                        loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/catagory/${params.catagoryId}`),
+                    }
+                ]
+            }
         ] 
     }
 ]);

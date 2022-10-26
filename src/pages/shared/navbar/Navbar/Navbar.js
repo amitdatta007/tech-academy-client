@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div
                         className={`nav-items flex absolute md:static w-full h-[calc(100vh-60px)] md:h-fit md:w-fit md:gap-8 left-0 black font-semibold ${open ? 'top-[60px]' : 'top-[-120vh]'} ${open ? 'z-10' : 'z-10'} flex-col md:flex-row justify-center items-center duration-700 ease-in-out gap-3 md:duration-[0s]`}
                     >
-                        <NavItem name='Courses' path='/courses' setOpen={setOpen} />
+                        <NavItem name='Courses' path='/catagory/06' setOpen={setOpen} />
                         <NavItem name='FAQ' path='/faq' setOpen={setOpen} />
                         <NavItem name='Blogs' path='/blogs' setOpen={setOpen} />
                         <div className='vartical-line hidden md:block'></div>

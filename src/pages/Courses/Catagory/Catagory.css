@@ -1,0 +1,9 @@
+.catagory{
+    /* background-color: var(--base-300); */
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px var(--base-300);
+}

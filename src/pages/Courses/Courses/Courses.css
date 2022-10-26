@@ -1,0 +1,14 @@
+.course-page{
+    width: 95%;
+    max-width: 1280px;
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 16px;
+}
+
+@media screen and (max-width: 640px) {
+    .course-page{
+        grid-template-columns: 1fr;
+    }
+}
