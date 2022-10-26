@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import {FaGithub, FaGoogle, FaFacebook} from 'react-icons/fa';
 import { AuthContext } from '../../context/UserContext';
 
 const Register = () => {
     const [error, setError] = useState(null);
-
-    const {createUser, updateUser, setProfileUpdated, profileUpdated, handleGoogleLogin, handleFacebookLogin, handleGithubLogin} = useContext(AuthContext)
+    const {createUser, updateUser, setProfileUpdated, profileUpdated, handleGoogleLogin, handleFacebookLogin, handleGithubLogin} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
     const handleRegister = e => {
         e.preventDefault();
@@ -40,7 +42,29 @@ const Register = () => {
             setError('Email Already Used.')
            }
         });
-    }
+    };
+
+
+    const loginByGoogle = () => {
+        handleGoogleLogin()
+        .then(() => {
+            navigate(from, { replace: true });
+        })
+    };
+
+    const loginByFacebook = () => {
+        handleFacebookLogin()
+        .then(() => {
+            navigate(from, { replace: true });
+        })
+    };
+
+    const loginByGithub = () => {
+        handleGithubLogin()
+        .then(() => {
+            navigate(from, { replace: true });
+        })
+    };
 
     return (
         <div className='login-page'>
@@ -66,13 +90,13 @@ const Register = () => {
                 </form>
                 <div className='horizontal-line'></div>
                 <div className='third-party-login'>
-                    <button onClick={handleGoogleLogin}>
+                    <button onClick={loginByGoogle}>
                         <FaGoogle />
                     </button>
-                    <button onClick={handleFacebookLogin}>
+                    <button onClick={loginByFacebook}>
                         <FaFacebook />
                     </button>
-                    <button onClick={handleGithubLogin}>
+                    <button onClick={loginByGithub}>
                         <FaGithub />
                     </button>
                 </div>

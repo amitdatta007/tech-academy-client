@@ -6,6 +6,7 @@ import ShowCourses from '../pages/Courses/ShowCourses/ShowCourses';
 import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
 const Router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ const Router = createBrowserRouter([
                 path: '/course/:courseId',
                 element: <CourseInfo />,
                 loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/course/${params.courseId}`),
+            },
+            {
+                path: '/checkout/:courseId',
+                element : <ProtectedRoute><p>this is checkout page</p></ProtectedRoute>
             }
         ] 
     }

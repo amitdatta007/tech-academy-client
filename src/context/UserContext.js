@@ -8,16 +8,19 @@ const auth = getAuth(app);
 const UserContext = ({ children }) => {
     const [user, setUser] = useState(null);
     const [profileUpdated, setProfileUpdated] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
     const signIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
 
@@ -33,31 +36,32 @@ const UserContext = ({ children }) => {
     };
 
     const handleGoogleLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     };
 
     const handleFacebookLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, facebookProvider);
     };
 
     const handleGithubLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, githubProvider);
     };
-
-
-
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setLoading(false);
         });
         return () => {
             unsubscribe();
         }
     }, [profileUpdated]);
 
+    const value = {user, createUser, signIn, logOut, updateUser, profileUpdated, setProfileUpdated, handleGoogleLogin, handleFacebookLogin, handleGithubLogin, loading};
 
-    const value = {user, createUser, signIn, logOut, updateUser, profileUpdated, setProfileUpdated, handleGoogleLogin, handleFacebookLogin, handleGithubLogin};
     return (
         <AuthContext.Provider value={value}>
             {children}
