@@ -28,7 +28,7 @@ const Home = () => {
                 <div className='w-full lg:w-1/2 p-5 flex flex-col gap-4 justify-center'>
                     <h2 className='banner-title'>Learn Effectively that will take you towards your goal</h2>
                     <p className='banner-description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur expedita praesentium deleniti nihil quod quasi nobis fugiat esse maiores eos? Unde accusamus inventore eos consectetur eaque quae sequi ipsum molestiae.</p>
-                    <Link className='explore-courses-btn' to='/courses'>Explore Courses</Link>
+                    <Link className='explore-courses-btn' to='/catagory/06'>Explore Courses</Link>
                 </div>
             </div>
         </div>

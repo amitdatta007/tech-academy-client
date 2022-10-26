@@ -6,4 +6,5 @@
     gap: 24px;
     border-radius: 12px;
     box-shadow: 0 0 25px var(--base-300);
+    height: fit-content;
 }
