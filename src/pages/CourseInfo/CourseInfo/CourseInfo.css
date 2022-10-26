@@ -1,0 +1,32 @@
+.course-info-page{
+    width: 95%;
+    max-width: 1280px;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 40px;
+}
+.course-details{
+    box-shadow: 0 0 20px var(--base-300);
+    border-radius: 12px;
+}
+.course-details img{
+    width: 100%;
+    border-radius: 10px;
+}
+.course-title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--success);
+}
+.author{
+    color: var(--base-content);
+    text-align: right;
+}
+
+
+@media screen and (max-width: 768px) {
+    .course-info-page{
+        grid-template-columns: 1fr;
+    }
+}

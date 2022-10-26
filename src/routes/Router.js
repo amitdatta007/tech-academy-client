@@ -1,5 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Main from '../layout/Main';
+import CourseInfo from '../pages/CourseInfo/CourseInfo/CourseInfo';
 import Courses from '../pages/Courses/Courses/Courses';
 import ShowCourses from '../pages/Courses/ShowCourses/ShowCourses';
 import Home from '../pages/Home/Home/Home';
@@ -41,6 +42,11 @@ const Router = createBrowserRouter([
                         loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/catagory/${params.catagoryId}`),
                     }
                 ]
+            },
+            {
+                path: '/course/:courseId',
+                element: <CourseInfo />,
+                loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/course/${params.courseId}`),
             }
         ] 
     }
