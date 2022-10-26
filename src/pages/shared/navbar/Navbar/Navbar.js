@@ -6,6 +6,7 @@ import { HiSun, HiMoon, HiUser } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../context/UserContext';
 import {useScrollLock} from '../../../../hook/useScrollLock';
+import ReactTooltip from "react-tooltip";
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -13,6 +14,7 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const {lockScroll, unlockScroll} = useScrollLock();
     open ? lockScroll() : unlockScroll();
+
 
     useEffect(() => {
         if (isDarkMode) {
@@ -55,12 +57,15 @@ const Navbar = () => {
                             user?.uid ?
                                 <div className='flex items-center gap-6'>
                                     {
-                                        user.photoURL ? <div>
+                                        user.photoURL ? <div data-tip="React-tooltip">
                                             <img src={user.photoURL} alt="" className='user-img'/>
-                                        </div> : <div className='default-user-img'>
+                                        </div> : <div className='default-user-img' data-tip="React-tooltip">
                                             <HiUser />
                                         </div>
                                     }
+                                    <ReactTooltip type='success' place="bottom" effect="solid">
+                                        {user.displayName}
+                                    </ReactTooltip>
                                     <button onClick={handleLogout} className='login-btn'>Log Out</button>
                                 </div>
                                 :
@@ -73,6 +78,7 @@ const Navbar = () => {
                     <div className='z-20 theme-icon' onClick={() => setIsDarkMode(!isDarkMode)}>
                         {
                             isDarkMode ? <HiMoon /> : <HiSun />
+
                         }
                     </div>
                     <div onClick={() => setOpen(!open)} className="h-7 w-7 md:hidden z-20 menu-icon">

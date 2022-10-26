@@ -1,0 +1,22 @@
+.checkout-page{
+    width: 95%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+}
+.summary{
+    width: 95%;
+    max-width: 420px;
+    background-color: var(--base-300);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 8px;
+}
+.checkout-btn{
+    color: var(--base-100);
+    background-color: var(--warning);
+    padding: 12px 0;
+    border-radius: 6px;
+}

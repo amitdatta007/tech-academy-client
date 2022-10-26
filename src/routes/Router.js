@@ -1,5 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Main from '../layout/Main';
+import CheckOut from '../pages/CheckOut/CheckOut';
 import CourseInfo from '../pages/CourseInfo/CourseInfo/CourseInfo';
 import Courses from '../pages/Courses/Courses/Courses';
 import ShowCourses from '../pages/Courses/ShowCourses/ShowCourses';
@@ -51,7 +52,8 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/checkout/:courseId',
-                element : <ProtectedRoute><p>this is checkout page</p></ProtectedRoute>
+                element : <ProtectedRoute><CheckOut /></ProtectedRoute>,
+                loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/course/${params.courseId}`),
             }
         ] 
     }

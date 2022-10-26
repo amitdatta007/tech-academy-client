@@ -1,45 +1,56 @@
-.navbar{
+.navbar {
     /* background-color: var(--secondary); */
     width: 95%;
     max-width: 1280px;
 }
-.logo-text{
+
+.logo-text {
     font-size: 2rem;
     font-weight: 700;
 }
-.logo-text-left{
+
+.logo-text-left {
     color: var(--primary);
 }
-.logo-text-right{
+
+.logo-text-right {
     color: var(--base-content);
 }
+
 .nav-items {
-   background-color: var(--base-100);
+    background-color: var(--base-100);
 }
-.nav-item{
+
+.nav-item {
     color: var(--base-content);
     font-size: 1.1rem;
     font-weight: 600;
 }
-.nav-item:hover{
+
+.nav-item:hover {
     color: var(--primary);
 }
-.active{
+
+.active {
     color: var(--primary);
 }
-.theme-icon{
+
+.theme-icon {
     font-size: 1.4rem;
-    color: var(--base-content);  
-}
-.menu-icon{
     color: var(--base-content);
 }
-.vartical-line{
+
+.menu-icon {
+    color: var(--base-content);
+}
+
+.vartical-line {
     width: 1px;
     height: 20px;
     background-color: var(--base-content);
 }
-.login-btn{
+
+.login-btn {
     background-color: var(--base-content);
     padding: 4px 12px;
     color: var(--base-300);
@@ -47,18 +58,20 @@
     font-size: 1.1rem;
     font-weight: 700;
 }
-.login-btn:hover{
+
+.login-btn:hover {
     background-color: transparent;
     color: var(--base-content);
     box-shadow: inset 0 0 0 1.5px var(--base-content);
 }
-.default-user-img{
+
+.default-user-img {
     font-size: 2rem;
     color: var(--base-content);
 }
-.user-img{
+
+.user-img {
     height: 32px;
     width: 32px;
     border-radius: 50%;
 }
-
