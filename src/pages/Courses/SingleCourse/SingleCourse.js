@@ -20,7 +20,7 @@ const SingleCourse = ({ course }) => {
                     <p className='text-[var(--base-content)]'>{description.slice(0, 120)} ... <Link className='text-[var(--primary)]' to={`/course/${id}`}>Read More</Link></p>
                 </div>
                 <div className='flex justify-between'>
-                    <p className='flex items-center gap-2 font-semibold text-[var(--warning)]'>{rating} <div className='flex items-center'><FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt /></div></p>
+                    <p className='flex items-center gap-2 font-semibold text-[var(--warning)]'>{rating} <span className='flex items-center'><FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalfAlt /></span></p>
                     <div className='price'>{price}$</div>
                 </div>
             </div>

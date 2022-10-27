@@ -20,3 +20,7 @@
     padding: 12px 0;
     border-radius: 6px;
 }
+.checkout-btn:disabled{
+    background-color: var(--success);
+    opacity: 0.6;
+}
