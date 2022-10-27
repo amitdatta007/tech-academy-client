@@ -1,3 +1,35 @@
+# Tech Academy
+
+### Live Site: 
+
+
+## Features
+- Home page with custom animation
+- Responsive navbar
+- Email password login method 
+- Email password register method 
+- Third party(google, facebook, github) login method
+- Light and dark theme toggle
+- Course route with catagory
+- Course details page with Buy option and download info as pdf
+- Checkout page using protected route
+- Blog route
+- 404 not found page
+- Many more
+
+## Technology
+- React js
+- React Router
+- Firebase
+- Tailwind css
+- React icons
+- Lottiefiles
+- React to pdf
+- React Toastify
+- React tooltip
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
