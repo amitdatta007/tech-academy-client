@@ -7,6 +7,7 @@ import Courses from '../pages/Courses/Courses/Courses';
 import ShowCourses from '../pages/Courses/ShowCourses/ShowCourses';
 import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login';
+import NotFound from '../pages/NotFound/NotFound';
 import Register from '../pages/Register/Register';
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
@@ -21,7 +22,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/faq',
-                element: <p>Faq page</p>
+                element: <h2 className='text-5xl text-center text-[var(--base-content)] font-extrabold'>Coming Soon..</h2>
             },
             {
                 path: '/blogs',
@@ -57,6 +58,10 @@ const Router = createBrowserRouter([
                 loader: async({params}) => fetch(`https://tech-academy-server.vercel.app/course/${params.courseId}`),
             }
         ] 
+    },
+    {
+        path: '/*',
+        element: <NotFound />
     }
 ]);
 
